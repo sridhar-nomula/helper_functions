@@ -18,3 +18,6 @@ def flatten_dict(d, parent_key='', sep='_'):
         else:
             items.append((new_key, v))
     return dict(items)
+
+flattend_file = [flatten_dict(d) for d in pr_list]
+df = pd.DataFrame(flattend_file)
